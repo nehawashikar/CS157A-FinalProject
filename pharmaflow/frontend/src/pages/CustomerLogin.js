@@ -1,15 +1,54 @@
 import React from 'react';
-import {useState, use} from 'react';
 import axios from 'axios';
-import { Link }from 'react-router-dom';
-import Dropdown from 'react-dropdown';
+import { Navigate }from 'react-router-dom';
 
-function CustomerLogin() {
-    return (
-        <div>
-            <h1>CustomerLogin</h1>
-        </div>
-    );
+class CustomerLogin extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            enteredID: "",
+            enteredName: "",
+            valid: false,
+            msg: ""
+        };
+        this.setuid = this.props.setuid.bind(this);
+    }
+
+    async handleClick() {
+        //authenticate
+        console.log(this.state);
+        if (this.state.enteredID == "1234" && this.state.enteredName == "Joe") {
+            await this.setState({valid: true});
+            this.setuid(this.state.enteredID);
+        }
+        else {
+            await this.setState({msg: "Invalid login, try again"});
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>Customer Login</h1>
+                <h4 style={{color: "red"}}>{this.state.msg}</h4>
+                <div>
+                   <input placeholder="enter customer ID" onChange={async (event) => await this.setState({enteredID: event.target.value})}/>
+                </div>
+                <div>
+                <input placeholder="enter name" onChange={async (event) => await this.setState({enteredName: event.target.value})}/>
+                </div>
+                <button onClick ={async () => await this.handleClick()}>Login</button>
+
+                {
+                    (this.state.valid) ? (
+                        <Navigate to={`/customer-homepage`}/>
+                    ) : (
+                        <p></p>
+                    )
+                }
+            </div>
+        );
+    }
 }
 
 export default CustomerLogin;
