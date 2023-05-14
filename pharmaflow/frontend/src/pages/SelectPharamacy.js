@@ -27,11 +27,11 @@ class SelectPharmacy extends React.Component {
             await this.setState({msg: "Select a  pharmacy first"});
         }
     }
-    //to={`/homepage/${this.state.selectedPharmacy}`}
+    
     render() {
         return (
             <div className = "page">
-                <h1>PharmaFlow</h1>
+                <h1><span style={{color:"#EF984B"}}>Pharma</span><span style={{color:"#9544A2"}}>Flow</span></h1>
                 <Dropdown className="dropdown" 
                           onChange={async (event) => await this.setState({selectedPharmacy: event.value})}  
                           options={this.state.pharmacyNames} 

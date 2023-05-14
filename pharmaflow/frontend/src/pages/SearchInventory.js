@@ -12,4 +12,5 @@ function SearchInventory() {
     );
 }
 
+
 export default SearchInventory;

@@ -25,7 +25,7 @@ class UserSelect extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={{color:"#EF984B"}}>
                 <div>
                     <h1>{this.state.pharmacyName} Portal</h1>
                 </div>
@@ -34,9 +34,9 @@ class UserSelect extends React.Component {
                     <h3>{this.state.pharmacyWebsite}</h3>
                     <h1>  </h1>
                 </div>
-                <div style={{color:'blue'}}>
-                    <h5><Link to="/employee-login">Employee Login</Link></h5>
-                    <h5><Link to="/customer-login">Customer Login</Link></h5>
+                <div>
+                    <h5><Link style={{color:"#9544A2"}} to="/employee-login">Employee Login</Link></h5>
+                    <h5><Link style={{color:"#9544A2"}} to="/customer-login">Customer Login</Link></h5>
                 </div>
             </div>
         );
