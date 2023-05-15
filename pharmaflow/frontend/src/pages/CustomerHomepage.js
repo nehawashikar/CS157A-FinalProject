@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link }from 'react-router-dom';
-import Dropdown from 'react-dropdown';
 
 function CustomerHomepage(props) {
     const [name, setName] = useState("");

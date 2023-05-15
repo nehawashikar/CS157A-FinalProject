@@ -1,8 +1,9 @@
 .dropdown {
     margin: auto;
     width: 20%;
-    border: 3px solid black;
+    border: 3px solid #EF984B;
     padding: 10px;
+    color:#9544A2
 }
 
 

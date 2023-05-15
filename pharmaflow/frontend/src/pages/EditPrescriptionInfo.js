@@ -29,8 +29,9 @@ class EditPrescriptionInfo extends React.Component {
 
     render() {
         return (
-            <div style={{color:"#EF984B"}}>
-                <h1>EditPrescriptionInfo</h1>
+            <div style={{color:"#9544A2"}}>
+                <h1>Edit John Smith's Prescription Information</h1>
+                <h3>Customer email: johnsmith@gmail.com</h3>
                 <div>
                     <span>
                         <p>Prescption ID: &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <input placeholder={`${this.state.pID}`} onChange={async (event) => await this.setState({pID: event.target.value})}/></p> 

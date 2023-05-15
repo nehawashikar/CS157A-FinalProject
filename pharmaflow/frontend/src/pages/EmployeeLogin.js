@@ -27,7 +27,7 @@ class EmployeeLogin extends React.Component {
 
     render() {
         return (
-            <div style={{color:"#EF984B"}}>
+            <div style={{color:"#9544A2"}}>
                 <h1>Employee Login</h1>
                 <h4 style={{color: "red"}}>{this.state.msg}</h4>
                 <div>

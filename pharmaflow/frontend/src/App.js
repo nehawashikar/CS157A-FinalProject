@@ -5,7 +5,7 @@ import React from 'react';
 
 import SelectPharmacy from './pages/SelectPharamacy';
 import UserSelect from './pages/UserSelect';
-import SelectPharmacyLocation from './pages/SelectPharmacyLocation';
+//import SelectPharmacyLocation from './pages/SelectPharmacyLocation';
 import CustomerLogin from './pages/CustomerLogin';
 import CustomerHomepage from './pages/CustomerHomepage';
 import EmployeeHomepage from './pages/EmployeeHomepage';
@@ -19,6 +19,7 @@ import AddSupplier from './pages/AddSupplier';
 import AddCustomer from './pages/AddCustomer';
 import PlaceOrder from './pages/PlaceOrder';
 import EditPrescriptionInfo from './pages/EditPrescriptionInfo';
+import CustomerInvoice from './pages/CustomerInvoice';
 
 class App extends React.Component {
   constructor(props) {
@@ -57,6 +58,7 @@ class App extends React.Component {
               <Route path="/add-supplier" element={<AddSupplier/>}/>
               <Route path="/add-customer" element={<AddCustomer/>}/>
               <Route path="/place-order" element={<PlaceOrder/>}/>
+              <Route path="/customer-invoice" element={<CustomerInvoice/>}/>
               <Route path="/edit-prescription-info/:customerID" element={<EditPrescriptionInfo employeeID ={localStorage.getItem('uid')}/>}/>
             </Routes>
           </BrowserRouter>

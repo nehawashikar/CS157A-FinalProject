@@ -31,16 +31,16 @@ class SearchCustomer extends React.Component {
 
     render() {
         return (
-            <div style={{color:"#EF984B"}}>
+            <div style={{color:"#9544A2"}}>
                 <h1>Search for Customer</h1>
 
-                <div style={{color:"#9544A2"}}>
+                <div>
                     <p>Enter query like this</p>
                     <p>identifier: value</p>
-                    <p>Valid identifiers are id, name, and email. Click on a customer's name to edit their prescription information</p>
-                
-                    <span>
-                        <input style={{width:900, borderWidth: 4, borderColor:"#9544A2"}} placeholder='ex. name: John Smith'></input>
+                    <p>Valid identifiers are id, name, and email. Click on a customer's <span style={{color:"#EF984B"}}>name</span> to edit their prescription information</p>
+                    
+                    <span style={{}}>
+                        <input style={{width:900, borderWidth: 4, borderColor:"#EF984B"}} placeholder='ex. name: John Smith'></input>
                         <button style={{width:100, borderWidth: 4, borderColor:"#EF984B"}}onClick ={async () => await this.handleClick()}>Search</button>
                     </span>
                 </div>
