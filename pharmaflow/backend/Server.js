@@ -1,8 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
+const bodyParser = require('body-parser');
 
 const app = express();
+const port = 5000;
+var urlencodedParser = bodyParser.urlencoded( {extended: false} );
+
 
 app.use(cors({
     origin: true,
@@ -17,14 +21,19 @@ const con = mysql.createConnection({
     database: "pharmacy",
 });
 
-con.connect((err) => {
-    if (err) {
-        console.log(err);
-    }
-    else {
-        console.log("connection successful");
-    }
+
+app.post('/getAllPharmacies', urlencodedParser, (req, res) => {
+
+    res.send(req.query);
 });
 
 
+/*
+
+con.connect((err) => { if (err) { console.log(err) } });
+
+
 con.end()
+*/
+
+app.listen(5000, () => console.log(`Server started on ${port}`));
