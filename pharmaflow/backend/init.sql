@@ -1,4 +1,4 @@
-CREATE TABLE CustomerPrescriptionInvoice (
+CREATE TABLE customer_prescription_invoice (
     CustomerID INT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
     Address VARCHAR(255) NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE CustomerPrescriptionInvoice (
     TotalCost DECIMAL(8,2)
 );
 
-CREATE TABLE Employee (
+CREATE TABLE employee (
     EmployeeID INT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
     Address VARCHAR(255) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE Employee (
     Salary DECIMAL(8,2)
 );
 
-CREATE TABLE Product (
+CREATE TABLE product (
     ProductNumber INT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
     Brand VARCHAR(50),
@@ -37,7 +37,7 @@ CREATE TABLE Product (
     SupplierID INT
 );
 
-CREATE TABLE Supplier (
+CREATE TABLE supplier (
     SupplierID INT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
     Address VARCHAR(255),
@@ -46,14 +46,14 @@ CREATE TABLE Supplier (
     Website VARCHAR(50)
 );
 
-CREATE TABLE PharmacyOrder (
+CREATE TABLE pharmacy_order (
     OrderID INT PRIMARY KEY,
     OrderDate DATE,
     SupplierID INT,
     TotalCost DECIMAL(8,2)
 );
 
-CREATE TABLE OrderLineItem (
+CREATE TABLE order_line_item (
     OrderID INT,
     ProductNumber INT,
     Quantity INT,
@@ -61,7 +61,7 @@ CREATE TABLE OrderLineItem (
     FOREIGN KEY (ProductNumber) REFERENCES Product(ProductNumber)
 );
 
-CREATE TABLE InvoiceLineItem (
+CREATE TABLE invoice_line_item (
     InvoiceNumber INT,
     ProductNumber INT,
     QuantityOrdered INT,
@@ -69,7 +69,7 @@ CREATE TABLE InvoiceLineItem (
     FOREIGN KEY (ProductNumber) REFERENCES Product(ProductNumber)
 );
 
-CREATE TABLE Pharmacy (
+CREATE TABLE pharmacy (
     PharmacyID INT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
     Address VARCHAR(255),
