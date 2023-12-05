@@ -1,4 +1,4 @@
-CREATE TABLE `customer_prescription_invoice` (
+CREATE TABLE `customer_prescription_invoice` ( 
   `customer_id` int NOT NULL,
   `name` varchar(100) NOT NULL,
   `address` varchar(255) NOT NULL,
